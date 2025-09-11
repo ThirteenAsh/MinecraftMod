@@ -1,3 +1,5 @@
 {
-  "item.testmod.example_item":"测试物品"
+  "item.testmod.example_item":"测试物品",
+  "itemGroup.example_group": "测试组",
+  "item.testmod.cherry":"樱桃"
 }
