@@ -1,5 +1,6 @@
  package com.besson.thirteenash;
 
+import com.besson.thirteenash.items.ModItemGroups;
 import com.besson.thirteenash.items.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -20,6 +21,10 @@ public class MinecraftEnhancedMod implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 		ModItems.registerItems();
+		ModItemGroups.registerToolsGroups();
+		ModItemGroups.registerOtherGroups();
+		ModItemGroups.totalGroups();
+		ModItemGroups.registerFoodGroups();
 		LOGGER.info("Hello Fabric world!");
 	}
 }
