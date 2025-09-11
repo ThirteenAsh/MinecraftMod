@@ -1,25 +1,25 @@
 {
 	"schemaVersion": 1,
-	"id": "testmod",
+	"id": "minecraft_enhanced_mod",
 	"version": "${version}",
-	"name": "testMod",
+	"name": "MinecraftEnhancedMod",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
-		"Me!"
+		"ThirteenAsh"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/testmod/icon.png",
+	"icon": "assets/MinecraftEnhancedMod/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.besson.thirteenash.TestMod"
+          "com.besson.thirteenash.MinecraftEnhancedMod"
 		],
 		"fabric-datagen": [
-			"com.besson.thirteenash.TestModDataGenerator"
+			"com.besson.thirteenash.MinecraftEnhancedModDataGenerator"
 		]
 	},
 	"mixins": [

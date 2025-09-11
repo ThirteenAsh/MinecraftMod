@@ -9,12 +9,12 @@ public class RedstoneToolMaterial implements ToolMaterial {
 
     @Override
     public int getDurability() {
-        return 250; // 耐久度
+        return 350; // 耐久度
     }
 
     @Override
     public float getMiningSpeedMultiplier() {
-        return 8.0F; // 挖掘速度
+        return 9.0F; // 挖掘速度
     }
 
     @Override
@@ -29,7 +29,7 @@ public class RedstoneToolMaterial implements ToolMaterial {
 
     @Override
     public int getEnchantability() {
-        return 15; // 附魔能力
+        return 20; // 附魔能力
     }
 
     @Override

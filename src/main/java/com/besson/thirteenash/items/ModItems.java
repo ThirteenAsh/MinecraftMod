@@ -1,10 +1,8 @@
 package com.besson.thirteenash.items;
 
-import com.besson.thirteenash.TestMod;
+import com.besson.thirteenash.MinecraftEnhancedMod;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
 import net.minecraft.item.ShovelItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -35,7 +33,7 @@ public class ModItems {
 
     // 基础注册方法
     public static Item registerItems(String id, Item item) {
-        return Registry.register(Registries.ITEM, new Identifier(TestMod.MOD_ID, id), item);
+        return Registry.register(Registries.ITEM, new Identifier(MinecraftEnhancedMod.MOD_ID, id), item);
     }
 
     private static void addItemtoItemGroup(FabricItemGroupEntries entries){
