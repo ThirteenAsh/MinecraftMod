@@ -1,5 +1,6 @@
-package com.besson.thirteenash.items;
+package com.besson.thirteenash.items.materials;
 
+import com.besson.thirteenash.items.ModItems;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 

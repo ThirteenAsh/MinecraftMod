@@ -1,6 +1,8 @@
 package com.besson.thirteenash.items;
 
 import com.besson.thirteenash.MinecraftEnhancedMod;
+import com.besson.thirteenash.items.materials.CharoiteToolMaterial;
+import com.besson.thirteenash.items.materials.RedstoneToolMaterial;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -37,8 +39,9 @@ public class ModItems {
             new Item(new Item.Settings().maxCount(64)));
     // 紫龙晶剑
     public static final Item CHAROITE_SWORD = registerItems("charoite_sword",
-            new SwordItem(CharoiteToolMaterial.INSTANCE, 3, -2.4F,
+            new CharoiteSword(CharoiteToolMaterial.INSTANCE, 3, -2.4F,
                     new Item.Settings().maxCount(1)));
+
     // 图标物品 仅作为图标使用
     public static final Item ICON = registerItems("icon",
             new Item(new Item.Settings()));

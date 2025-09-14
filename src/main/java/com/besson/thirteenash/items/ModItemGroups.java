@@ -36,6 +36,7 @@ public class ModItemGroups {
                             entries.add(ModItems.RAINBOW);
                             entries.add(ModBlocks.CHAROITE_ORE);
                             entries.add(ModItems.CHAROITE);
+                            entries.add(ModItems.CHAROITE_SWORD);
                         })
                         .build());
     }
@@ -50,6 +51,7 @@ public class ModItemGroups {
                         .entries((displayContext, entries) -> {
                             entries.add(ModItems.REDSTONE_SHOVEL);
                             entries.add(ModItems.RAINBOW);
+                            entries.add(ModItems.CHAROITE_SWORD);
                         })
                         .build());
     }

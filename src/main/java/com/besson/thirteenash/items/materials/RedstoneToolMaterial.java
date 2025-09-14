@@ -1,10 +1,11 @@
-package com.besson.thirteenash.items;
+package com.besson.thirteenash.items.materials;
 
 import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
 public class RedstoneToolMaterial implements ToolMaterial {
+
     public static final RedstoneToolMaterial INSTANCE = new RedstoneToolMaterial();
 
     @Override
