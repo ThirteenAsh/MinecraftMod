@@ -1,6 +1,7 @@
 package com.besson.thirteenash.items;
 
 import com.besson.thirteenash.MinecraftEnhancedMod;
+import com.besson.thirteenash.block.ModBlocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
@@ -15,8 +16,8 @@ public class ModItemGroups {
 
     public static final RegistryKey<ItemGroup> TOOLS_GROUP = register("tools_group");
     public static final RegistryKey<ItemGroup> OTHER_GROUP = register("other_group");
-    public static final RegistryKey<ItemGroup> FOOD_GROUP = register("other_group");
-    public static final RegistryKey<ItemGroup> TOTAL_GROUP = register("other_group");
+    public static final RegistryKey<ItemGroup> FOOD_GROUP = register("food_group");
+    public static final RegistryKey<ItemGroup> TOTAL_GROUP = register("total_group");
     private static RegistryKey<ItemGroup> register(String id) {
         return RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(MinecraftEnhancedMod.MOD_ID, id));
     }
@@ -27,11 +28,14 @@ public class ModItemGroups {
                 TOTAL_GROUP,
                 ItemGroup.create(ItemGroup.Row.TOP, 7)
                         .displayName(Text.translatable("itemGroup.minecraft_enhanced_mod.total_group"))
-                        .icon(() -> new ItemStack(ModItems.REDSTONE_SHOVEL))
+                        .icon(() -> new ItemStack(ModItems.ICON))
                         .entries((displayContext, entries) -> {
                             entries.add(ModItems.REDSTONE_SHOVEL);
                             entries.add(ModItems.CHERRY);
                             entries.add(ModItems.EXAMPLE_ITEM);
+                            entries.add(ModItems.RAINBOW);
+                            entries.add(ModBlocks.CHAROITE_ORE);
+                            entries.add(ModItems.CHAROITE);
                         })
                         .build());
     }
@@ -40,11 +44,12 @@ public class ModItemGroups {
         Registry.register(
                 Registries.ITEM_GROUP,
                 TOOLS_GROUP,
-                ItemGroup.create(ItemGroup.Row.TOP, 7)
+                ItemGroup.create(ItemGroup.Row.TOP, 8)
                         .displayName(Text.translatable("itemGroup.minecraft_enhanced_mod.tools_group"))
                         .icon(() -> new ItemStack(ModItems.REDSTONE_SHOVEL))
                         .entries((displayContext, entries) -> {
                             entries.add(ModItems.REDSTONE_SHOVEL);
+                            entries.add(ModItems.RAINBOW);
                         })
                         .build());
     }
@@ -53,11 +58,10 @@ public class ModItemGroups {
         Registry.register(
                 Registries.ITEM_GROUP,
                 OTHER_GROUP,
-                ItemGroup.create(ItemGroup.Row.TOP, 7)
+                ItemGroup.create(ItemGroup.Row.TOP, 9)
                         .displayName(Text.translatable("itemGroup.minecraft_enhanced_mod.other_group"))
                         .icon(() -> new ItemStack(ModItems.EXAMPLE_ITEM))
                         .entries((displayContext, entries) -> {
-                            entries.add(ModItems.CHERRY);
                             entries.add(ModItems.EXAMPLE_ITEM);
                                                     })
                         .build());
@@ -67,13 +71,19 @@ public class ModItemGroups {
         Registry.register(
                 Registries.ITEM_GROUP,
                 FOOD_GROUP,
-                ItemGroup.create(ItemGroup.Row.TOP, 7)
+                ItemGroup.create(ItemGroup.Row.TOP, 10)
                         .displayName(Text.translatable("itemGroup.minecraft_enhanced_mod.food_group"))
                         .icon(() -> new ItemStack(ModItems.CHERRY))
                         .entries((displayContext, entries) -> {
                             entries.add(ModItems.CHERRY);
                         })
                         .build());
+    }
+    public  static void registerItemGroups() {
+        registerToolsGroups();
+        registerOtherGroups();
+        registerFoodGroups();
+        totalGroups();
     }
 }
 
