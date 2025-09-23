@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "minecraft_enhanced_mod:block/charoite_ore"
-  }
-}

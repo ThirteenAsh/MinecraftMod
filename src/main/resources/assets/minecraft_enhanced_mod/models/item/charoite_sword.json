@@ -1,6 +1,0 @@
-{
-  "parent": "item/handheld",
-  "textures": {
-    "layer0": "minecraft_enhanced_mod:item/charoite_sword"
-  }
-}
