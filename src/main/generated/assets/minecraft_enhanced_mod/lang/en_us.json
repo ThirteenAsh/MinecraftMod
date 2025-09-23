@@ -1,0 +1,14 @@
+{
+  "block.minecraft_enhanced_mod.charoite_ore": "Charoite Ore",
+  "item.minecraft_enhanced_mod.charoite": "Charoite",
+  "item.minecraft_enhanced_mod.charoite_sword": "Charoite Sword",
+  "item.minecraft_enhanced_mod.cherry": "Cherry",
+  "item.minecraft_enhanced_mod.example_item": "Example Item",
+  "item.minecraft_enhanced_mod.icon": "Icon",
+  "item.minecraft_enhanced_mod.rainbow": "Rainbow",
+  "item.minecraft_enhanced_mod.redstone_shovel": "Redstone Shovel",
+  "itemGroup.minecraft_enhanced_mod.food_group": "Food Items",
+  "itemGroup.minecraft_enhanced_mod.other_group": "Other Items",
+  "itemGroup.minecraft_enhanced_mod.tools_group": "Tools",
+  "itemGroup.minecraft_enhanced_mod.total_group": "All Items"
+}
