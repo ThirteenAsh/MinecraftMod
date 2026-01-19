@@ -4,7 +4,7 @@ import com.besson.thirteenash.block.ModBlocks;
 import com.besson.thirteenash.items.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
-
+// 用于生成掉落物数据
 public class ModLootTableProvider extends FabricBlockLootTableProvider {
     public ModLootTableProvider(FabricDataOutput dataOutput) {
         super(dataOutput);

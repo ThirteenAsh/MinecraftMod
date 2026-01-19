@@ -5,7 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 
 import java.util.function.Consumer;
-
+// 用于生成合成配方数据
 public class ModRecipesProvider extends FabricRecipeProvider {
     public ModRecipesProvider(FabricDataOutput output) {
         super(output);

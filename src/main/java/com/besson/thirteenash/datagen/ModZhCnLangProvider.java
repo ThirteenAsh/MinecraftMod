@@ -5,7 +5,7 @@ import com.besson.thirteenash.items.ModItemGroups;
 import com.besson.thirteenash.items.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
-
+// 用于生成中文语言文件
 public class ModZhCnLangProvider extends FabricLanguageProvider {
     public ModZhCnLangProvider(FabricDataOutput dataOutput) {
         super(dataOutput, "zh_cn");

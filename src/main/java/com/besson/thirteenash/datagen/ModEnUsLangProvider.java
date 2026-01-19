@@ -5,7 +5,7 @@ import com.besson.thirteenash.items.ModItemGroups;
 import com.besson.thirteenash.items.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
-
+// 数据生成 用于生成语言文件
 public class ModEnUsLangProvider extends FabricLanguageProvider {
     public ModEnUsLangProvider(FabricDataOutput dataOutput) {
         super(dataOutput, "en_us");

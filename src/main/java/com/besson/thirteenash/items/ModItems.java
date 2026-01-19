@@ -19,24 +19,29 @@ public class ModItems {
     // 示例模组
     public static final Item EXAMPLE_ITEM = registerItems("example_item",
             new Item(new Item.Settings().maxCount(64)));
+
     // 樱桃物品
     public static final Item CHERRY = registerItems("cherry",
             new Item(new Item.Settings().maxCount(64)
                     .maxCount(64)            // 最大堆叠 64 个
                     .food(CHERRY_FOOD)   // 设置食物属性));
             ));
+
     // 红石铲子
     public static final Item REDSTONE_SHOVEL = registerItems("redstone_shovel",
             new ShovelItem(RedstoneToolMaterial.INSTANCE, 1.5F, -3.0F,
                     new Item.Settings().maxCount(1)));
+
     // 彩虹物品
     public static final Item RAINBOW = new RainbowItem();
     public static void registerRainbowItems() {
         Registry.register(Registries.ITEM, new Identifier(MinecraftEnhancedMod.MOD_ID, "rainbow"), RAINBOW);
     }
+
     // 紫龙晶
     public static final Item CHAROITE = registerItems("charoite",
             new Item(new Item.Settings().maxCount(64)));
+
     // 紫龙晶剑
     public static final Item CHAROITE_SWORD = registerItems("charoite_sword",
             new CharoiteSword(CharoiteToolMaterial.INSTANCE, 3, -2.4F,
@@ -51,7 +56,7 @@ public class ModItems {
         return Registry.register(Registries.ITEM, new Identifier(MinecraftEnhancedMod.MOD_ID, id), item);
     }
 
-
+    // 注册所有物品
     public static void registerItems(){
         ModItems.registerRainbowItems();
     }
