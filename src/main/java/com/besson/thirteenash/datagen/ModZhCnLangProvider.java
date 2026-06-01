@@ -29,7 +29,28 @@ public class ModZhCnLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItemGroups.TOTAL_GROUP, "所有项");
 
         translationBuilder.add("effect.minecraft_enhanced_mod.wooden_sword_battle_focus", "轻盈");
-        translationBuilder.add("tooltip.minecraft_enhanced_mod.wooden_sword_skill",
-                "主动技能：疾风斩:右键释放，5秒内攻击速度+35%，移动速度+5% 冷却：10秒。");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.wooden_sword_skill.hold_shift",
+                "按住 Shift 查看技能详情。");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.wooden_sword_skill.title",
+                "主动技能：疾风斩");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.wooden_sword_skill.use",
+                "右键释放，获得效果“轻盈”。");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.wooden_sword_skill.effect",
+                "轻盈：5秒内攻击速度+35%，移动速度+5%。");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.wooden_sword_skill.cooldown",
+                "冷却：10秒。");
+
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.charoite_sword_skill.hold_shift",
+                "按住 Shift 查看紫龙晶剑技能详情。");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.charoite_sword_skill.title",
+                "主动技能：龙息弹");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.charoite_sword_skill.use",
+                "右键释放，发射一枚龙息火球。");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.charoite_sword_skill.effect",
+                "龙息火球会沿准星方向高速飞行。");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.charoite_sword_skill.cost",
+                "消耗耐久：20。");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.charoite_sword_skill.cooldown",
+                "冷却：5秒。");
     }
 }

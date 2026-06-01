@@ -29,8 +29,29 @@ public class ModEnUsLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItemGroups.TOTAL_GROUP, "All Items");
 
         translationBuilder.add("effect.minecraft_enhanced_mod.wooden_sword_battle_focus", "Lightness");
-        translationBuilder.add("tooltip.minecraft_enhanced_mod.wooden_sword_skill",
-                "Active Skill: Gale Slash: Right-click to activate, increasing attack speed by 35% and movement speed by 5% for 5 seconds. Cooldown: 10 seconds.");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.wooden_sword_skill.hold_shift",
+                "Hold Shift to view Lightness skill details.");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.wooden_sword_skill.title",
+                "Active Skill: Gale Slash");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.wooden_sword_skill.use",
+                "Right-click to activate.");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.wooden_sword_skill.effect",
+                "+35% attack speed and +5% movement speed for 5 seconds.");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.wooden_sword_skill.cooldown",
+                "Cooldown: 10 seconds.");
+
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.charoite_sword_skill.hold_shift",
+                "Hold Shift to view Charoite Sword skill details.");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.charoite_sword_skill.title",
+                "Active Skill: Dragon Breath");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.charoite_sword_skill.use",
+                "Right-click to launch a dragon fireball.");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.charoite_sword_skill.effect",
+                "The fireball flies in the direction you are looking.");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.charoite_sword_skill.cost",
+                "Durability cost: 20.");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.charoite_sword_skill.cooldown",
+                "Cooldown: 1 second.");
 
     }
 }

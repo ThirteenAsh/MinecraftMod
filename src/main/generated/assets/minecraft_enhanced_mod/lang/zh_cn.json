@@ -12,5 +12,15 @@
   "itemGroup.minecraft_enhanced_mod.other_group": "其他物品",
   "itemGroup.minecraft_enhanced_mod.tools_group": "工具",
   "itemGroup.minecraft_enhanced_mod.total_group": "所有项",
-  "tooltip.minecraft_enhanced_mod.wooden_sword_skill": "主动技能：疾风斩:右键释放，5秒内攻击速度+35%，移动速度+5% 冷却：10秒。"
+  "tooltip.minecraft_enhanced_mod.charoite_sword_skill.cooldown": "冷却：1秒。",
+  "tooltip.minecraft_enhanced_mod.charoite_sword_skill.cost": "消耗耐久：20。",
+  "tooltip.minecraft_enhanced_mod.charoite_sword_skill.effect": "龙息火球会沿准星方向高速飞行。",
+  "tooltip.minecraft_enhanced_mod.charoite_sword_skill.hold_shift": "按住 Shift 查看紫龙晶剑技能详情。",
+  "tooltip.minecraft_enhanced_mod.charoite_sword_skill.title": "主动技能：龙息弹",
+  "tooltip.minecraft_enhanced_mod.charoite_sword_skill.use": "右键释放，发射一枚龙息火球。",
+  "tooltip.minecraft_enhanced_mod.wooden_sword_skill.cooldown": "冷却：10秒。",
+  "tooltip.minecraft_enhanced_mod.wooden_sword_skill.effect": "轻盈：5秒内攻击速度+35%，移动速度+5%。",
+  "tooltip.minecraft_enhanced_mod.wooden_sword_skill.hold_shift": "按住 Shift 查看技能详情。",
+  "tooltip.minecraft_enhanced_mod.wooden_sword_skill.title": "主动技能：疾风斩",
+  "tooltip.minecraft_enhanced_mod.wooden_sword_skill.use": "右键释放，获得效果“轻盈”。"
 }

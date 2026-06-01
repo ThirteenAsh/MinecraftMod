@@ -42,7 +42,7 @@ public class CharoiteSword extends SwordItem {
         }
 
         // 设置冷却（可选）
-        user.getItemCooldownManager().set(this, 20); // 1秒冷却
+        user.getItemCooldownManager().set(this, 100); // 1秒冷却
 
         return TypedActionResult.success(stack, world.isClient());
     }
