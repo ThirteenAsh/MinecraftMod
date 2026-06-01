@@ -27,5 +27,9 @@ public class ModZhCnLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItemGroups.OTHER_GROUP, "其他物品");
         translationBuilder.add((ModItemGroups.TOOLS_GROUP), "工具");
         translationBuilder.add(ModItemGroups.TOTAL_GROUP, "所有项");
+
+        translationBuilder.add("effect.minecraft_enhanced_mod.wooden_sword_battle_focus", "轻盈");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.wooden_sword_skill",
+                "主动技能：疾风斩:右键释放，5秒内攻击速度+35%，移动速度+5% 冷却：10秒。");
     }
 }

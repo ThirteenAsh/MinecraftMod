@@ -28,5 +28,9 @@ public class ModEnUsLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItemGroups.TOOLS_GROUP, "Tools");
         translationBuilder.add(ModItemGroups.TOTAL_GROUP, "All Items");
 
+        translationBuilder.add("effect.minecraft_enhanced_mod.wooden_sword_battle_focus", "Lightness");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.wooden_sword_skill",
+                "Active Skill: Gale Slash: Right-click to activate, increasing attack speed by 35% and movement speed by 5% for 5 seconds. Cooldown: 10 seconds.");
+
     }
 }

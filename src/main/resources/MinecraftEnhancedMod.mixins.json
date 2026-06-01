@@ -3,7 +3,11 @@
 	"package": "com.besson.thirteenash.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ExampleMixin"
+		"ExampleMixin",
+		"WoodenSwordSkillMixin"
+	],
+	"client": [
+		"WoodenSwordTooltipMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

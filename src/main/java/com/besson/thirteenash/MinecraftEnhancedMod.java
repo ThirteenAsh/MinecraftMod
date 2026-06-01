@@ -1,5 +1,6 @@
- package com.besson.thirteenash;
+package com.besson.thirteenash;
 
+import com.besson.thirteenash.effects.ModStatusEffects;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -18,6 +19,7 @@ import static com.besson.thirteenash.items.ModItems.registerItems;
 	public void onInitialize() {
 
 		registerItems();
+		ModStatusEffects.registerStatusEffects();
 		registerItemGroups();
 		registerModBlocks();
 		LOGGER.info("Hello Fabric world!");

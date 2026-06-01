@@ -1,5 +1,6 @@
 {
   "block.minecraft_enhanced_mod.charoite_ore": "Charoite Ore",
+  "effect.minecraft_enhanced_mod.wooden_sword_battle_focus": "Lightness",
   "item.minecraft_enhanced_mod.charoite": "Charoite",
   "item.minecraft_enhanced_mod.charoite_sword": "Charoite Sword",
   "item.minecraft_enhanced_mod.cherry": "Cherry",
@@ -10,5 +11,6 @@
   "itemGroup.minecraft_enhanced_mod.food_group": "Food Items",
   "itemGroup.minecraft_enhanced_mod.other_group": "Other Items",
   "itemGroup.minecraft_enhanced_mod.tools_group": "Tools",
-  "itemGroup.minecraft_enhanced_mod.total_group": "All Items"
+  "itemGroup.minecraft_enhanced_mod.total_group": "All Items",
+  "tooltip.minecraft_enhanced_mod.wooden_sword_skill": "Active Skill: Gale Slash: Right-click to activate, increasing attack speed by 35% and movement speed by 5% for 5 seconds. Cooldown: 10 seconds."
 }
