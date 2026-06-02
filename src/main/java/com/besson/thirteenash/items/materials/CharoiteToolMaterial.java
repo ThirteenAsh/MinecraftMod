@@ -20,7 +20,7 @@ public class CharoiteToolMaterial implements ToolMaterial {
 
     @Override
     public float getAttackDamage() {
-        return 3.5f; // 基础攻击力加成，SwordItem 会再加 3
+        return 4.5f; // 基础攻击力加成，SwordItem 会再加 3
     }
 
     @Override

@@ -16,17 +16,17 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(Item.class)
-public class WoodenSwordSkillMixin {
-    // 技能效果持续时间。Minecraft 20 tick = 1秒；这里是 5 秒
-    private static final int SKILL_DURATION_TICKS = 20 * 5;
-    // 技能冷却时间。这里是 10秒；如果想让效果和冷却不同步，只改这个值即可。
+public class StoneSwordSkillMixin {
+    // 石剑技能“蓄力”持续时间。Minecraft 20 tick = 1秒；这里是 5秒。
+    private static final int CHARGE_DURATION_TICKS = 20 * 5;
+    // 石剑技能冷却时间。这里是 10秒；测试时可以临时改短。
     private static final int SKILL_COOLDOWN_TICKS = 20 * 10;
 
     @Inject(method = "use", at = @At("HEAD"), cancellable = true)
-    private void minecraftEnhancedMod$useWoodenSwordSkill(World world, PlayerEntity user, Hand hand,
-                                                          CallbackInfoReturnable<TypedActionResult<ItemStack>> cir) {
+    private void minecraftEnhancedMod$useStoneSwordSkill(World world, PlayerEntity user, Hand hand,
+                                                         CallbackInfoReturnable<TypedActionResult<ItemStack>> cir) {
         ItemStack stack = user.getStackInHand(hand);
-        if (!stack.isOf(Items.WOODEN_SWORD)) {
+        if (!stack.isOf(Items.STONE_SWORD)) {
             return;
         }
 
@@ -36,16 +36,15 @@ public class WoodenSwordSkillMixin {
         }
 
         if (!world.isClient) {
-            user.addStatusEffect(new StatusEffectInstance(ModStatusEffects.WOODEN_SWORD_BATTLE_FOCUS,
-                    SKILL_DURATION_TICKS,
-                    // 状态效果等级。0 表示一级；本技能的具体数值写在 ModStatusEffects 的属性修饰器里。
+            user.addStatusEffect(new StatusEffectInstance(ModStatusEffects.STONE_SWORD_CHARGE,
+                    CHARGE_DURATION_TICKS,
                     0,
                     false,
                     true,
                     true));
-            // 疾风斩释放音效：音量 0.8，音调 1.35；提高音调会更轻快，降低音调会更厚重。
+            // 碎骨重击释放音效：使用穿上钻石盔甲的音效；音量/音调可按手感微调。
             world.playSound(null, user.getX(), user.getY(), user.getZ(),
-                    SoundEvents.ENTITY_PLAYER_ATTACK_SWEEP, user.getSoundCategory(), 0.8F, 1.35F);
+                    SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, user.getSoundCategory(), 0.85F, 1.0F);
         }
 
         user.getItemCooldownManager().set(stack.getItem(), SKILL_COOLDOWN_TICKS);

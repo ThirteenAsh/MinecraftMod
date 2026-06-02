@@ -3,11 +3,13 @@
 	"package": "com.besson.thirteenash.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ExampleMixin",
+		"StoneSwordChargeAttackMixin",
+		"StoneSwordSkillMixin",
 		"WoodenSwordSkillMixin"
 	],
 	"client": [
 		"CharoiteSwordTooltipMixin",
+		"StoneSwordTooltipMixin",
 		"WoodenSwordTooltipMixin"
 	],
 	"injectors": {

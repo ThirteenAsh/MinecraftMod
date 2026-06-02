@@ -28,7 +28,8 @@ public class ModEnUsLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItemGroups.TOOLS_GROUP, "Tools");
         translationBuilder.add(ModItemGroups.TOTAL_GROUP, "All Items");
 
-        translationBuilder.add("effect.minecraft_enhanced_mod.wooden_sword_battle_focus", "Lightness");
+        translationBuilder.add("effect.minecraft_enhanced_mod.wooden_sword_battle_focus", "Lightness: Speed Up");
+        translationBuilder.add("effect.minecraft_enhanced_mod.stone_sword_charge", "Charge: Bonus Hit");
         translationBuilder.add("tooltip.minecraft_enhanced_mod.wooden_sword_skill.hold_shift",
                 "Hold Shift to view Lightness skill details.");
         translationBuilder.add("tooltip.minecraft_enhanced_mod.wooden_sword_skill.title",
@@ -52,6 +53,19 @@ public class ModEnUsLangProvider extends FabricLanguageProvider {
                 "Durability cost: 20.");
         translationBuilder.add("tooltip.minecraft_enhanced_mod.charoite_sword_skill.cooldown",
                 "Cooldown: 1 second.");
+
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.stone_sword_skill.hold_shift",
+                "Hold Shift to view Stone Sword skill details.");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.stone_sword_skill.title",
+                "Active Skill: Bonebreaker Smash");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.stone_sword_skill.use",
+                "Right-click to gain Charge for 5 seconds.");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.stone_sword_skill.effect",
+                "While charged: attacks deal +1.0 damage and slow the target for 2 seconds.");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.stone_sword_skill.undead",
+                "Against undead: +1.0 additional damage.");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.stone_sword_skill.cooldown",
+                "Cooldown: 10 seconds.");
 
     }
 }

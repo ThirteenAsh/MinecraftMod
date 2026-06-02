@@ -28,7 +28,8 @@ public class ModZhCnLangProvider extends FabricLanguageProvider {
         translationBuilder.add((ModItemGroups.TOOLS_GROUP), "工具");
         translationBuilder.add(ModItemGroups.TOTAL_GROUP, "所有项");
 
-        translationBuilder.add("effect.minecraft_enhanced_mod.wooden_sword_battle_focus", "轻盈");
+        translationBuilder.add("effect.minecraft_enhanced_mod.wooden_sword_battle_focus", "轻盈：攻速与移速提升");
+        translationBuilder.add("effect.minecraft_enhanced_mod.stone_sword_charge", "蓄力：增伤并减速");
         translationBuilder.add("tooltip.minecraft_enhanced_mod.wooden_sword_skill.hold_shift",
                 "按住 Shift 查看技能详情。");
         translationBuilder.add("tooltip.minecraft_enhanced_mod.wooden_sword_skill.title",
@@ -52,5 +53,18 @@ public class ModZhCnLangProvider extends FabricLanguageProvider {
                 "消耗耐久：20。");
         translationBuilder.add("tooltip.minecraft_enhanced_mod.charoite_sword_skill.cooldown",
                 "冷却：5秒。");
+
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.stone_sword_skill.hold_shift",
+                "按住 Shift 查看石剑技能详情。");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.stone_sword_skill.title",
+                "主动技能：碎骨重击");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.stone_sword_skill.use",
+                "右键释放，获得5秒“蓄力”效果。");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.stone_sword_skill.effect",
+                "蓄力期间攻击额外伤害+1.0，并使目标减速2秒。");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.stone_sword_skill.undead",
+                "对亡灵生物：额外伤害再+1.0。");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.stone_sword_skill.cooldown",
+                "冷却：10秒。");
     }
 }

@@ -44,7 +44,7 @@ public class ModItems {
 
     // 紫龙晶剑
     public static final Item CHAROITE_SWORD = registerItems("charoite_sword",
-            new CharoiteSword(CharoiteToolMaterial.INSTANCE, 3, -2.4F,
+            new CharoiteSword(CharoiteToolMaterial.INSTANCE, 4, -2.4F,
                     new Item.Settings().maxCount(1)));
 
     // 图标物品 仅作为图标使用
