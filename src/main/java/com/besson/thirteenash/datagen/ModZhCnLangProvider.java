@@ -23,6 +23,17 @@ public class ModZhCnLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.RAINBOW, "彩虹");
         translationBuilder.add(ModItems.REDSTONE_SHOVEL, "红石铲");
 
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.rainbow.description",
+                "下雨或打雷时右键使用，可以让天气放晴。");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.rainbow.uses",
+                "剩余次数：%s/%s。");
+        translationBuilder.add("message.minecraft_enhanced_mod.rainbow.clear_weather",
+                "彩虹的魔法让天气变晴了！");
+        translationBuilder.add("message.minecraft_enhanced_mod.rainbow.used_up",
+                "彩虹已经消耗完了！");
+        translationBuilder.add("message.minecraft_enhanced_mod.rainbow.already_clear",
+                "呐，现在要开始放晴了~");
+
         translationBuilder.add(ModItemGroups.FOOD_GROUP, "食物");
         translationBuilder.add(ModItemGroups.OTHER_GROUP, "其他物品");
         translationBuilder.add((ModItemGroups.TOOLS_GROUP), "工具");

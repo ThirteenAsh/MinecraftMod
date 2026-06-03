@@ -23,6 +23,17 @@ public class ModEnUsLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.RAINBOW, "Rainbow");
         translationBuilder.add(ModItems.REDSTONE_SHOVEL, "Redstone Shovel");
 
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.rainbow.description",
+                "Right-click during rain or thunder to clear the weather.");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.rainbow.uses",
+                "Uses left: %s/%s.");
+        translationBuilder.add("message.minecraft_enhanced_mod.rainbow.clear_weather",
+                "Rainbow magic cleared the weather!");
+        translationBuilder.add("message.minecraft_enhanced_mod.rainbow.used_up",
+                "The rainbow has been used up!");
+        translationBuilder.add("message.minecraft_enhanced_mod.rainbow.already_clear",
+                "The weather is already clear.");
+
         translationBuilder.add(ModItemGroups.FOOD_GROUP, "Food Items");
         translationBuilder.add(ModItemGroups.OTHER_GROUP, "Other Items");
         translationBuilder.add(ModItemGroups.TOOLS_GROUP, "Tools");
