@@ -30,6 +30,8 @@ public class ModZhCnLangProvider extends FabricLanguageProvider {
 
         translationBuilder.add("effect.minecraft_enhanced_mod.wooden_sword_battle_focus", "轻盈：攻速与移速提升");
         translationBuilder.add("effect.minecraft_enhanced_mod.stone_sword_charge", "蓄力：增伤并减速");
+        translationBuilder.add("effect.minecraft_enhanced_mod.iron_sword_sharp_blade", "利刃：下次攻击强化");
+        translationBuilder.add("effect.minecraft_enhanced_mod.bleeding", "流血：持续失血");
         translationBuilder.add("tooltip.minecraft_enhanced_mod.wooden_sword_skill.hold_shift",
                 "按住 Shift 查看技能详情。");
         translationBuilder.add("tooltip.minecraft_enhanced_mod.wooden_sword_skill.title",
@@ -66,5 +68,16 @@ public class ModZhCnLangProvider extends FabricLanguageProvider {
                 "对亡灵生物：额外伤害再+1.0。");
         translationBuilder.add("tooltip.minecraft_enhanced_mod.stone_sword_skill.cooldown",
                 "冷却：10秒。");
+
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.iron_sword_skill.hold_shift",
+                "按住 Shift 查看技能详情。");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.iron_sword_skill.title",
+                "主动技能：利刃");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.iron_sword_skill.effect",
+                "右键激活：6秒内下次命中+4伤害。");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.iron_sword_skill.bleeding",
+                "附加流血6秒：静止0.5/s，移动1/s，可致死。");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.iron_sword_skill.cooldown",
+                "冷却：12秒。");
     }
 }

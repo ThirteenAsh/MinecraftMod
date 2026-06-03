@@ -21,7 +21,6 @@ public class StoneSwordTooltipMixin {
     private void minecraftEnhancedMod$appendStoneSwordSkillTooltip(ItemStack stack, World world, List<Text> tooltip,
                                                                    TooltipContext context, CallbackInfo ci) {
         if (stack.isOf(Items.STONE_SWORD)) {
-            // 石剑技能说明文本在语言文件里，修改技能数值后记得同步更新对应 tooltip 文案。
             if (!Screen.hasShiftDown()) {
                 tooltip.add(Text.translatable("tooltip.minecraft_enhanced_mod.stone_sword_skill.hold_shift")
                         .formatted(Formatting.GRAY));

@@ -23,17 +23,17 @@ public class StoneSwordChargeAttackMixin {
     private static final int SLOWNESS_DURATION_TICKS = 20 * 2;
     // 减速等级。0 表示缓慢 I。
     private static final int SLOWNESS_AMPLIFIER = 0;
+    // 铁剑“利刃”下一次命中增加的伤害。
+    private static final float IRON_SWORD_EXTRA_DAMAGE = 4.0F;
+    // 铁剑命中后施加的流血时间。Minecraft 20 tick = 1秒；这里是 6秒。
+    private static final int BLEEDING_DURATION_TICKS = 20 * 6;
 
     @Redirect(method = "attack",
             at = @At(value = "INVOKE",
                     target = "Lnet/minecraft/entity/Entity;damage(Lnet/minecraft/entity/damage/DamageSource;F)Z"))
     private boolean minecraftEnhancedMod$applyStoneSwordChargeDamage(Entity target, DamageSource source, float amount) {
         PlayerEntity player = (PlayerEntity) (Object) this;
-        if (player.getWorld().isClient || !player.hasStatusEffect(ModStatusEffects.STONE_SWORD_CHARGE)) {
-            return target.damage(source, amount);
-        }
-
-        if (!player.getMainHandStack().isOf(Items.STONE_SWORD)) {
+        if (player.getWorld().isClient) {
             return target.damage(source, amount);
         }
 
@@ -41,19 +41,51 @@ public class StoneSwordChargeAttackMixin {
             return target.damage(source, amount);
         }
 
-        float extraDamage = EXTRA_DAMAGE;
-        if (livingTarget.getGroup() == EntityGroup.UNDEAD) {
-            extraDamage += UNDEAD_EXTRA_DAMAGE;
+        boolean stoneSwordChargeActive = player.hasStatusEffect(ModStatusEffects.STONE_SWORD_CHARGE)
+                && player.getMainHandStack().isOf(Items.STONE_SWORD);
+        boolean ironSwordSharpBladeActive = player.hasStatusEffect(ModStatusEffects.IRON_SWORD_SHARP_BLADE)
+                && player.getMainHandStack().isOf(Items.IRON_SWORD);
+
+        if (!stoneSwordChargeActive && !ironSwordSharpBladeActive) {
+            return target.damage(source, amount);
         }
 
-        boolean damaged = target.damage(source, amount + extraDamage);
-        if (damaged && livingTarget.isAlive()) {
+        float modifiedAmount = amount;
+        if (stoneSwordChargeActive) {
+            modifiedAmount += EXTRA_DAMAGE;
+            if (livingTarget.getGroup() == EntityGroup.UNDEAD) {
+                modifiedAmount += UNDEAD_EXTRA_DAMAGE;
+            }
+        }
+
+        if (ironSwordSharpBladeActive) {
+            modifiedAmount += IRON_SWORD_EXTRA_DAMAGE;
+        }
+
+        boolean damaged = target.damage(source, modifiedAmount);
+        if (!damaged) {
+            return false;
+        }
+
+        if (stoneSwordChargeActive && livingTarget.isAlive()) {
             livingTarget.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS,
                     SLOWNESS_DURATION_TICKS,
                     SLOWNESS_AMPLIFIER,
                     false,
                     true,
                     true), player);
+        }
+
+        if (ironSwordSharpBladeActive) {
+            player.removeStatusEffect(ModStatusEffects.IRON_SWORD_SHARP_BLADE);
+            if (livingTarget.isAlive()) {
+                livingTarget.addStatusEffect(new StatusEffectInstance(ModStatusEffects.BLEEDING,
+                        BLEEDING_DURATION_TICKS,
+                        0,
+                        false,
+                        true,
+                        true), player);
+            }
         }
         return damaged;
     }

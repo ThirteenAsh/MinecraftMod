@@ -38,7 +38,7 @@ public class RainbowItem extends Item {
                 }
             } else {
                 // 天气已经晴天，不消耗耐久，也不显示消息
-                user.sendMessage(Text.literal("现在已经是晴天了！"), false);
+                user.sendMessage(Text.literal("呐，现在要开始放晴了！"), false);
             }
         }
 

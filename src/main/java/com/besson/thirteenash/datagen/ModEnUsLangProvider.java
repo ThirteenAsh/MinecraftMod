@@ -30,6 +30,8 @@ public class ModEnUsLangProvider extends FabricLanguageProvider {
 
         translationBuilder.add("effect.minecraft_enhanced_mod.wooden_sword_battle_focus", "Lightness: Speed Up");
         translationBuilder.add("effect.minecraft_enhanced_mod.stone_sword_charge", "Charge: Bonus Hit");
+        translationBuilder.add("effect.minecraft_enhanced_mod.iron_sword_sharp_blade", "Keen Edge: Next Hit");
+        translationBuilder.add("effect.minecraft_enhanced_mod.bleeding", "Bleeding: Damage Over Time");
         translationBuilder.add("tooltip.minecraft_enhanced_mod.wooden_sword_skill.hold_shift",
                 "Hold Shift to view Lightness skill details.");
         translationBuilder.add("tooltip.minecraft_enhanced_mod.wooden_sword_skill.title",
@@ -66,6 +68,17 @@ public class ModEnUsLangProvider extends FabricLanguageProvider {
                 "Against undead: +1.0 additional damage.");
         translationBuilder.add("tooltip.minecraft_enhanced_mod.stone_sword_skill.cooldown",
                 "Cooldown: 10 seconds.");
+
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.iron_sword_skill.hold_shift",
+                "Hold Shift to view skill details.");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.iron_sword_skill.title",
+                "Active Skill: Keen Edge");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.iron_sword_skill.effect",
+                "Right-click: next hit within 6s deals +4 damage.");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.iron_sword_skill.bleeding",
+                "Bleed 6s: 0.5/s still, 1/s moving. Can kill.");
+        translationBuilder.add("tooltip.minecraft_enhanced_mod.iron_sword_skill.cooldown",
+                "Cooldown: 12 seconds.");
 
     }
 }
